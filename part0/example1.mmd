@@ -1,0 +1,18 @@
+sequenceDiagram
+    participant User
+    participant Browser
+    participant Server
+
+    User->>Browser: Open https://studies.cs.helsinki.fi/exampleapp/notes
+    Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    activate server
+    Server-->>Browser: HTML document
+    deactivate server
+
+    User->>Browser: Write something in text field
+    User->>Browser: Click Save button
+    Browser->>Server: Send note data
+    Server-->>Browser: Confirmation
+    Browser->>User: Note saved message
+
+

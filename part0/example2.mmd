@@ -1,0 +1,11 @@
+sequenceDiagram
+    participant User
+    participant Browser
+    participant SPA
+
+    User->>Browser: Open https://studies.cs.helsinki.fi/exampleapp/spa
+    Browser->>SPA: Request SPA app
+    SPA->>Browser: Serve SPA app
+    Browser->>User: Display SPA app
+
+
